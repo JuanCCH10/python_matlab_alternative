@@ -32,8 +32,7 @@ block_long = 98
 block_num = 3 # sin considerar el nid
 for i_aux in range(0,block_num):
         block = [lista[i] for i in range(nid_long+block_long*i_aux,nid_long+block_long*(i_aux+1))]
-        nombre = ["block_"+ str(i_aux+1)]
-        nombre = str(nombre)
+        nombre = 'block_'+ str(i_aux+1)
         block = str(block)
         escribir_txt(nombre,block)
 
