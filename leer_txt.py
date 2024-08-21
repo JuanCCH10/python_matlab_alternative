@@ -3,6 +3,14 @@ def leer_txt(file_name):
     lectura = open(file_name,"r")
     return lectura
 
+# funcion para escritura de archivos
+def escribir_txt(file_name,content):
+    escritura = open(file_name,"w")
+    escritura.write(content)
+    escritura.close()
+
+print("inicio")
+
 # nombre del archivo
 archivo = "simbolos.txt"
 
@@ -39,6 +47,22 @@ nid_block = [lista[i] for i in range(0,nid_long)]
 #longitud de la lista resultante
 print(len(nid_block))
 print(nid_block)
-block1 = [lista[i] for i in range(nid_long,nid_long+block_long)]
+block1 = [lista[i] for i in range(nid_long, nid_long+block_long)]
 print(len(block1))
 print(block1)
+block2 = [lista[i] for i in range(nid_long+block_long, nid_long+block_long*2)]
+print(block2)
+print(len(block2))
+block3 = [lista[i] for i in range(nid_long+block_long*2, nid_long+block_long*3)]
+
+
+# simplificar el código 
+block_num = 3 # sin considerar el nid
+for i_aux in range(0,block_num):
+        block = [lista[i] for i in range(nid_long+block_long*i,nid_long+block_long*(i+1))]
+        nombre = ["block_"+ str(i+1)]
+        nombre = str(nombre)
+        block = str(block)
+        escribir_txt(nombre,block)
+
+print("fin")
