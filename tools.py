@@ -26,3 +26,64 @@ def interleave(test_list):
     for i in range(0,98):
         interl[index[i]] = test_list[i]
     return interl
+
+# función para demapear datos de una lista
+# lista de prueba
+#lista_mapeada = ['00','10','10','10','01','11','11','11','11','10','01','10','10','11','00','11','11','01','01','01','10','00','00','00','00','01','10','01','01','00','11','00']
+def demap(mapeado):
+    demapeado = []
+    for i in range(len(mapeado)):
+        if i%2 :
+            aux = aux + mapeado[i]
+            match aux:
+                case '0010':
+                    demapeado.append('00')
+                    demapeado.append('00')
+                case '1010':
+                    demapeado.append('00')
+                    demapeado.append('01')
+                case '0111':
+                    demapeado.append('00')
+                    demapeado.append('10')
+                case '1111':
+                    demapeado.append('00')
+                    demapeado.append('11')
+                case '1110':
+                    demapeado.append('01')
+                    demapeado.append('00')
+                case '0110':
+                    demapeado.append('01')
+                    demapeado.append('01')
+                case '1011':
+                    demapeado.append('01')
+                    demapeado.append('10')
+                case '0011':
+                    demapeado.append('01')
+                    demapeado.append('11')
+                case '1101':
+                    demapeado.append('10')
+                    demapeado.append('00')
+                case '0101':
+                    demapeado.append('10')
+                    demapeado.append('01')
+                case '1000':
+                    demapeado.append('10')
+                    demapeado.append('10')
+                case '0000':
+                    demapeado.append('10')
+                    demapeado.append('11')
+                case '0001':
+                    demapeado.append('11')
+                    demapeado.append('00')
+                case '1001':
+                    demapeado.append('11')
+                    demapeado.append('01')
+                case '0100':
+                    demapeado.append('11')
+                    demapeado.append('10')
+                case '1100':
+                    demapeado.append('11')
+                    demapeado.append('11')
+        else:
+            aux = mapeado[i]
+    return demapeado

@@ -15,7 +15,8 @@ block_long = 98
 
 for i_aux in range(0,block_num):
         block = [lista_num[i] for i in range(nid_long+block_long*i_aux,nid_long+block_long*(i_aux+1))]   #recorte de bloques
-        nombre = file_gen_name + str(i_aux+1)                                                            #nombre del archivo
+        nombre = file_gen_name + str(i_aux+1) + '.txt'                                                         #nombre del archivo
         block = d_interleave(block)
+        block = demap(block)
         for i in range(0,block_long):
                 escribir_txt(nombre,block[i]+'\n')
