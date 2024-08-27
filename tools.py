@@ -31,59 +31,43 @@ def interleave(test_list):
 # lista de prueba
 #lista_mapeada = ['00','10','10','10','01','11','11','11','11','10','01','10','10','11','00','11','11','01','01','01','10','00','00','00','00','01','10','01','01','00','11','00']
 def demap(mapeado):
-    demapeado = []
+    demapeado = ['0000'] #parte del formato para la simulación de vivado, no forma parte de la información
     for i in range(len(mapeado)):
         if i%2 :
             aux = aux + mapeado[i]
             match aux:
                 case '0010':
-                    demapeado.append('00')
-                    demapeado.append('00')
+                    demapeado.append('0000')
                 case '1010':
-                    demapeado.append('00')
-                    demapeado.append('01')
+                    demapeado.append('0001')
                 case '0111':
-                    demapeado.append('00')
-                    demapeado.append('10')
+                    demapeado.append('0010')
                 case '1111':
-                    demapeado.append('00')
-                    demapeado.append('11')
+                    demapeado.append('0011')
                 case '1110':
-                    demapeado.append('01')
-                    demapeado.append('00')
+                    demapeado.append('0100')
                 case '0110':
-                    demapeado.append('01')
-                    demapeado.append('01')
+                    demapeado.append('0101')
                 case '1011':
-                    demapeado.append('01')
-                    demapeado.append('10')
+                    demapeado.append('0110')
                 case '0011':
-                    demapeado.append('01')
-                    demapeado.append('11')
+                    demapeado.append('0111')
                 case '1101':
-                    demapeado.append('10')
-                    demapeado.append('00')
+                    demapeado.append('1000')
                 case '0101':
-                    demapeado.append('10')
-                    demapeado.append('01')
+                    demapeado.append('1001')
                 case '1000':
-                    demapeado.append('10')
-                    demapeado.append('10')
+                    demapeado.append('1010')
                 case '0000':
-                    demapeado.append('10')
-                    demapeado.append('11')
+                    demapeado.append('1011')
                 case '0001':
-                    demapeado.append('11')
-                    demapeado.append('00')
+                    demapeado.append('1100')
                 case '1001':
-                    demapeado.append('11')
-                    demapeado.append('01')
+                    demapeado.append('1101')
                 case '0100':
-                    demapeado.append('11')
-                    demapeado.append('10')
+                    demapeado.append('1110')
                 case '1100':
-                    demapeado.append('11')
-                    demapeado.append('11')
+                    demapeado.append('1111')
         else:
             aux = mapeado[i]
     return demapeado
