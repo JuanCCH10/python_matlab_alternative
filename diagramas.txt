@@ -1,0 +1,39 @@
+Ciclo de simulación Vivado con archivos locales:
+
+                      _________                               _________
+                     |         |                             |         |
+                     |         |                             |         |
+    in_dib0.txt ---> | trellis | ---> out_trell12_0.txt ---> | viterbi | ---> recover_dib0.txt
+                     |         |                             |         |
+                     |         |                             |         |
+                      ---------                               ---------
+
+Trellis:
+- No mapeador
+- La simulación guarda los datos de salida con respecto a en
+- El formato de los datos en out_trell12_0.txt
+    ° dato inicial 0000, deffecto de escritura de archivo
+    ° 49 nibbles de datos
+
+Viterbi:
+- La simulación guarda la salida conforme a fin
+
+
+
+
+Ciclo de simulación Vivado con archivos virgula_v1:
+
+                      _________                               _________
+                     |         |                             |         |
+                     |         |                             |         |
+    in_dib0.txt ---> | trellis | ---> out_trell12_0.txt ---> | viterbi | ---> recover_dib0.txt
+                     |  + map  |                             |         |
+                     |         |                             |         |
+                      ---------                               ---------
+
+Trellis:
+- Con mapeador
+
+Viterbi:
+- ce_delay solo tarda 2 pulsos de reloj. Local tarda 3 pulsos de reloj. No existen diferencias con los datos utilizados para comparar.
+- Exteriormente se demapea y se desentrelaza.
