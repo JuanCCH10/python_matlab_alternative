@@ -71,3 +71,42 @@ def demap(mapeado):
         else:
             aux = mapeado[i]
     return demapeado
+
+def bin2hex(nibble_list):
+    conv_list = []
+    for i in range(len(nibble_list)):
+        aux = nibble_list[i]
+        match aux:
+            case '0000':
+                conv_list.append('0')
+            case '0001':
+                conv_list.append('1')
+            case '0010':
+                conv_list.append('2')
+            case '0011':
+                conv_list.append('3')
+            case '0100':
+                conv_list.append('4')
+            case '0101':
+                conv_list.append('5')
+            case '0110':
+                conv_list.append('6')
+            case '0111':
+                conv_list.append('7')
+            case '1000':
+                conv_list.append('8')
+            case '1001':
+                conv_list.append('9')
+            case '1010':
+                conv_list.append('A')
+            case '1011':
+                conv_list.append('B')
+            case '1100':
+                conv_list.append('C')
+            case '1101':
+                conv_list.append('D')
+            case '1110':
+                conv_list.append('E')
+            case '1111':
+                conv_list.append('F')
+    return conv_list
