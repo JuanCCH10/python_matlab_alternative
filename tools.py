@@ -14,7 +14,8 @@ def escribir_txt(file_name,content):
 # función para desentrelazar simbolos
 def d_interleave(lista):
     recover = []
-    index = [0,1,8,9,16,17,24,25,32,33,40,41,48,49,56,57,64,65,72,73,80,81,88,89,96,97,2,3,10,11,18,19,26,27,34,35,42,43,50,51,58,59,66,67,74,75,82,83,90,91,4,5,12,13,20,21,28,29,36,37,44,45,52,53,60,61,68,69,76,77,84,85,92,93,6,7,14,15,22,23,30,31,38,39,46,47,54,55,62,63,70,71,78,79,86,87,94,95] 
+    #index = [0,1,8,9,16,17,24,25,32,33,40,41,48,49,56,57,64,65,72,73,80,81,88,89,96,97,2,3,10,11,18,19,26,27,34,35,42,43,50,51,58,59,66,67,74,75,82,83,90,91,4,5,12,13,20,21,28,29,36,37,44,45,52,53,60,61,68,69,76,77,84,85,92,93,6,7,14,15,22,23,30,31,38,39,46,47,54,55,62,63,70,71,78,79,86,87,94,95] 
+    index = [0,1,26,27,50,51,74,75,2,3,28,29,52,53,76,77,4,5,30,31,54,55,78,79,6,7,32,33,56,57,80,81,8,9,34,35,58,59,82,83,10,11,36,37,60,61,84,85,12,13,38,39,62,63,86,87,14,15,40,41,64,65,88,89,16,17,42,43,66,67,90,91,18,19,44,45,68,69,92,93,20,21,46,47,70,71,94,95,22,23,48,49,72,73,96,97,24,25] 
     for i in range(len(index)):
         recover.append(lista[index[i]])
     return recover
@@ -148,3 +149,27 @@ def bin2hex(nibble_list):
             case '1111':
                 conv_list.append('F')
     return conv_list
+
+def compare_txt(name1,name2):
+    info1 = leer_txt(name1)
+    info2 = leer_txt(name2)
+
+    list1 = [str(num.strip()) for num in info1]
+    list2 = [str(num.strip()) for num in info2]
+
+    aciertos = 0
+    errores = 0
+    indices_error = []
+    for i in range(len(list1)):
+        if list1[i] == list2[i]:
+            aciertos = aciertos + 1
+        else:
+            errores = errores + 1
+            indices_error.append(i)
+
+    print('# de datos comparados',len(list1))
+    if errores == 0:
+        print('________________DATOS IGUALES________________')
+    else:
+        print('# de errores: ', errores)
+        print('indices de error: ',indices_error)
