@@ -72,6 +72,44 @@ def demap(mapeado):
             aux = mapeado[i]
     return demapeado
 
+def demap_nibble(mapeado):
+    demapeado = ['0000']
+    for i in range(len(mapeado)):
+        match mapeado[i]:
+            case '0010':
+                demapeado.append('0000')
+            case '1010':
+                demapeado.append('0001')
+            case '0111':
+                demapeado.append('0010')
+            case '1111':
+                demapeado.append('0011')
+            case '1110':
+                demapeado.append('0100')
+            case '0110':
+                demapeado.append('0101')
+            case '1011':
+                demapeado.append('0110')
+            case '0011':
+                demapeado.append('0111')
+            case '1101':
+                demapeado.append('1000')
+            case '0101':
+                demapeado.append('1001')
+            case '1000':
+                demapeado.append('1010')
+            case '0000':
+                demapeado.append('1011')
+            case '0001':
+                demapeado.append('1100')
+            case '1001':
+                demapeado.append('1101')
+            case '0100':
+                demapeado.append('1110')
+            case '1100':
+                demapeado.append('1111')
+    return demapeado
+
 def bin2hex(nibble_list):
     conv_list = []
     for i in range(len(nibble_list)):
