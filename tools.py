@@ -34,7 +34,7 @@ def demap(mapeado):
     demapeado = ['0000'] #parte del formato para la simulación de vivado, no forma parte de la información
     for i in range(len(mapeado)):
         if i%2 :
-            aux = aux + mapeado[i]
+            aux = aux + mapeado[i] #forma el nibble
             match aux:
                 case '0010':
                     demapeado.append('0000')

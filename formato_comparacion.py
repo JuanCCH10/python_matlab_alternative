@@ -1,8 +1,8 @@
 from tools import *
 
 # nombre del archivo fuente
-archivo = "Datos de entrada FTP/03_block_1_out.txt"
-nombre = '03_block_1_out_hex.txt'
+archivo = "01_block_1_rec_loc.txt"
+nombre = '01_block_1_rec_loc_hex.txt'
 
 array1 = leer_txt(archivo)
 

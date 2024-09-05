@@ -1,10 +1,10 @@
 from tools import *
 
 # nombre del archivo fuente
-archivo = "Datos de entrada FTP/03_MSN_D_Confirm.txt"
+archivo = "Datos de entrada FTP/01_MSN_D_Confirm.txt"
 # nomenclatura de los archivos resultado
-file_gen_name = '03_block_'
-block_num = 5 # sin considerar el nid
+file_gen_name = '01_block_'
+block_num = 4 # sin considerar el nid
 
 array1 = leer_txt(archivo)
 
