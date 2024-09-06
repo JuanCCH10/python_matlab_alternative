@@ -34,3 +34,17 @@ Se puede segmentar la información con: Procesamiento datos de simulacion.py
 Faltaría dar formato a la información obtenida desde viterbi_12_local y quitar el 
 cero agregado al final que forma parte de la codificación
 
+Para decodificar Viterbi 3/4
+-Es necesario comprobar el funcionamiento de trellis-viterbi 3/4 de manera local
+    °generar proyecto trellis_34_local.
+        >alimentar con ...tribits.txt
+        >obtener ...out.txt
+    °generar proyecto viterbi_34_local
+        >alimentar con ...out.txt
+        >recuperar ...tribits.txt
+Para la comprobación será necesario revisar los archivos de simulación y verificar que 
+trellis sea sin mapeador.
+-Una vez verificado lo anterior, se deberá alimentar viterbi_34_local con los bloques 
+segmentados: 0x_block_x.txt. Se generarán los archivos: 0x_block_x_out.txt
+Dichos archivos deberán llevarse a su formato final en hex mediante 
+formato_comparacion.py, generando los archivos: 0x_block_x_out_hex.txt
