@@ -23,3 +23,14 @@ formato_comparacion.py, generando los archivos: 0x_block_x_out_hex.txt
         >Se empleo el archivo local
     °archivo de entrada: out_trell34_0.txt
     °archivo de salida: recover_trib0.txt
+-Se generó verificación_trellis-viterbi_local.py para comparación de los archivos.
+    °in_trib0.txt
+    °recover_trib0.txt
+    °Verificación exitosa
+-Decodificación de bloques faltantes
+    °archivos de entrada: 0x_block_x.txt, los bloques que no son 1
+    °archivos de salida: 0x_block_x_out.txt
+-Formato para comparación
+    °Se generó el archivo: formato_comparacion_tribits.py
+        >archivo de entrada: 0X_block_X_out.txt
+        >archivo de esalida: 0X_block_X_out_hex.txt

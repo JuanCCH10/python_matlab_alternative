@@ -2,7 +2,7 @@ from tools import *
 
 # nombre del archivo fuente
 archivo = "Datos de entrada FTP/03_block_1_out.txt"
-nombre = '03_block_1_out_hex.txt'
+nombre = 'eliminar.txt'
 
 array1 = leer_txt(archivo)
 
