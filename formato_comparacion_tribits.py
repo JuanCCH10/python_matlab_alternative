@@ -1,8 +1,8 @@
 from tools import *
 
 # nombre del archivo fuente
-archivo = "Datos de entrada FTP/03_block_5_out.txt"
-nombre = '03_block_5_out_hex.txt'
+archivo = "Datos de entrada FTP/01_block_2_out.txt"
+nombre = 'verificacion_conversion.txt'
 
 array1 = leer_txt(archivo)
 
@@ -15,6 +15,8 @@ lista_num.remove('UUU')  # se remueve el primer dato que e sun defecto en la esc
 aux_conc = []
 for i in range(len(lista_num)-1):
     aux_conc += lista_num[i]
+
+print(aux_conc)
 
 cont = 0
 aux = ''
@@ -29,10 +31,14 @@ for i in range(len(aux_conc)):
         aux = aux_conc[i]
         cont = 1
 
+print(nibble_list)
+
 hex_list = bin2hex(nibble_list) # conversión a notación hexadecimal
 
-for i in range(len(hex_list)):
-    if i%2 :
-        escribir_txt(nombre,hex_list[i]+' ')
-    else:
-        escribir_txt(nombre,hex_list[i])
+print(hex_list)
+
+# for i in range(len(hex_list)):
+#     if i%2 :
+#         escribir_txt(nombre,hex_list[i]+' ')
+#     else:
+#         escribir_txt(nombre,hex_list[i])
