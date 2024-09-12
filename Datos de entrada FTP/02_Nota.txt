@@ -1,7 +1,0 @@
-32 simbolos NID (descartar)
-98 simbolos con Trellis 1/2
-98 simbolos x2 Trellis 3/4
-
-Total 326 símbolos
-
-C1_1_ISP

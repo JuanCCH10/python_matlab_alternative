@@ -1,9 +1,0 @@
-Secuencia de comprobación
-
-                 _______________
-                |               |
-                |               |
-in_dibX.txt --> |  trellis 1/2  | --> out_trell12_X.txt --> 
-                |               |
-                |               |
-                 ---------------
