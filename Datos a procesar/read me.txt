@@ -1,0 +1,1 @@
+convertir una linea a hexadecimal, generar un txt separado en bytes
