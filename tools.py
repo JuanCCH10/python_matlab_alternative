@@ -173,3 +173,5 @@ def compare_txt(name1,name2):
     else:
         print('# de errores: ', errores)
         print('indices de error: ',indices_error)
+
+# distancia de hamming

@@ -8,8 +8,8 @@ from trellis_viterbi import *
 # Escribir en el archivo de salida cada uno de los datos resultantes de la codificación
 
 # Leer el archivo
-archivo = 'Datos de prueba/in_trib0.txt'
-array1 = leer_txt(archivo)
+archivo_in = 'Datos de prueba/in_trib0.txt'
+array1 = leer_txt(archivo_in)
 list_content = [str(num.strip()) for num in array1]
 
 # Escritura primer nibble en cero
