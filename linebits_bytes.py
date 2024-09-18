@@ -1,9 +1,9 @@
 from tools import *
 
 # nombre del archivo fuente
-archivo = 'Datos a procesar/MSN_D_Confirm.txt'
+archivo_in = 'Datos a procesar/MSN_D_Confirm.txt'
 archivo_out = 'MSN_D_Confirm_out.txt'
-array1 = leer_txt(archivo)
+array1 = leer_txt(archivo_in)
 list_content = [str(num.strip()) for num in array1]
 
 aux_conc = []
@@ -50,8 +50,10 @@ print('# byte :',len(byte_list))
 cont = 1
 for i in range(len(byte_list)):
     if cont == 18:
-        escribir_txt(archivo_out,'\n')
+        escribir_txt(archivo_out,byte_list[i]+'\n')
+        # print(byte_list[i] + '\n')
         cont = 1
     else:
         escribir_txt(archivo_out,byte_list[i])
+        # print(byte_list[i])
         cont = cont + 1
