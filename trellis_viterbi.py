@@ -145,3 +145,15 @@ def trellis_34(estat,data):
                 case '111':
                     cod_data = '1010'
     return cod_data
+
+# distancia de hamming entre dos listas cuyos elementos son bits
+def hamming_dist(dat1,dat2):
+    dist = 0
+    for ik in range(len(dat1)):
+        if dat1[ik] != dat2[ik]:
+            dist = dist + 1
+    return dist
+
+ = []
+
+def eval 

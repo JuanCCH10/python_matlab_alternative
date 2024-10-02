@@ -174,4 +174,6 @@ def compare_txt(name1,name2):
         print('# de errores: ', errores)
         print('indices de error: ',indices_error)
 
-# distancia de hamming
+# def from_any_to_X(dat):
+    
+#     return(weight, weight_acc)
